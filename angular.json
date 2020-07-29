@@ -2,5 +2,49 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "ng-min-max": {
+      "projectType": "library",
+      "root": "projects/ng-min-max",
+      "sourceRoot": "projects/ng-min-max/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-min-max/tsconfig.lib.json",
+            "project": "projects/ng-min-max/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-min-max/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-min-max/src/test.ts",
+            "tsConfig": "projects/ng-min-max/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-min-max/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-min-max/tsconfig.lib.json",
+              "projects/ng-min-max/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }},
+  "cli": {
+    "analytics": "3ec81dd9-1aed-465a-8292-356105a9b0ee"
+  },
+  "defaultProject": "ng-min-max"
 }
