@@ -7,4 +7,4 @@ import { MinDirective } from './min.directive';
   imports: [CommonModule],
   exports: [MinDirective],
 })
-export class AFTMinModule {}
+export class MinModule {}

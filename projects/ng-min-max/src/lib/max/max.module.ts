@@ -7,4 +7,4 @@ import { MaxDirective } from './max.directive';
   imports: [CommonModule],
   exports: [MaxDirective],
 })
-export class AFTMaxModule {}
+export class MaxModule {}
