@@ -30,19 +30,17 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ng-min-max/tsconfig.lib.json",
-              "projects/ng-min-max/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/ng-min-max/**/*.ts",
+              "projects/ng-min-max/**/*.html"
             ]
           }
         }
       }
-    }},
+    }
+  },
   "cli": {
     "analytics": "3ec81dd9-1aed-465a-8292-356105a9b0ee"
   },
