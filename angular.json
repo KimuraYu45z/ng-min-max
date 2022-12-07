@@ -43,6 +43,5 @@
   },
   "cli": {
     "analytics": "3ec81dd9-1aed-465a-8292-356105a9b0ee"
-  },
-  "defaultProject": "ng-min-max"
+  }
 }
